@@ -10,7 +10,7 @@ Competition:
 Alternatively, you can access the source of this dataset as a public dataset on Google Big Query:
 [https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips](https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips?tab=details)
 
-### You can access the capstone project rubric here:
+### Access the capstone project rubric here:
 [https://review.udacity.com/#!/rubrics/108/view](https://review.udacity.com/#!/rubrics/108/view)
 
 ##
