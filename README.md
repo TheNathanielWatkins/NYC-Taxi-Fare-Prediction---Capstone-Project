@@ -1,17 +1,19 @@
 # NYC-Taxi-Fare-Prediction---Capstone-Project
 Kaggle competition entry and Capstone project for Udacity Machine Learning Engineer Nanodegree
 
-## Kaggle Competition - New York City Taxi Fare Prediction
+### Kaggle Competition - New York City Taxi Fare Prediction
 Competition:
 [https://www.kaggle.com/c/new-york-city-taxi-fare-prediction](https://www.kaggle.com/c/new-york-city-taxi-fare-prediction)
 
-## Dataset available for download directly from Kaggle or used within a Kernel on their site
+### Dataset available for download directly from Kaggle or used within a Kernel on their site
 [https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/data](https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/data)
 Alternatively, you can access the source of this dataset as a public dataset on Google Big Query:
 [https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips](https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips?tab=details)
 
-You can access the capstone project rubric here:
+### You can access the capstone project rubric here:
 [https://review.udacity.com/#!/rubrics/108/view](https://review.udacity.com/#!/rubrics/108/view)
+
+##
 
 The data files are not included here on GitHub due to size limitations, but they can be downloaded from Kaggle then transformed using my "Data Exploration and File Prep.ipnyb" notebook.
 
