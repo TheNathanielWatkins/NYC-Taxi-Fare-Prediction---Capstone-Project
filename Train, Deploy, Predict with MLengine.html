@@ -8452,15 +8452,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11234,7 +11234,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11673,7 +11673,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11727,14 +11727,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13010,7 +13010,7 @@ div.bqgc img {
 }
 .gchart-controls {
   font-size: 14px;
-  color: #333333;	 
+  color: #333333;
   background: #f4f4f4;
   padding: 10px;
   width: 180px;
@@ -13759,7 +13759,7 @@ div.modal-dialog pre, div.modal-dialog code, #help code, #help pre {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1> Scaling up ML using Cloud ML Engine </h1>
+<h1> Scaling up ML using Cloud ML Engine </h1><p>Thanks to Google for providing training materials and coursework on TensorFlow, GCP and ML Engine. I used the code that they provided here as a starting point and structure for my project:<br><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/courses/machine_learning/deepdive/03_tensorflow">https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/courses/machine_learning/deepdive/03_tensorflow</a></p>
 </div>
 </div>
 </div>
@@ -15710,7 +15710,7 @@ import numpy as np
 tf.logging.set_verbosity(tf.logging.INFO)
 
 # List the CSV columns
-CSV_COLUMNS = ['key', 'fare_amount', 'pickup_longitude', 'pickup_latitude', 'dropoff_longitude', 'dropoff_latitude', 'passenger_count', 
+CSV_COLUMNS = ['key', 'fare_amount', 'pickup_longitude', 'pickup_latitude', 'dropoff_longitude', 'dropoff_latitude', 'passenger_count',
                'hour', 'day_of_week', 'day_of_month', 'week', 'month', 'year', 'distance_km']
 
 #Choose which column is your label
@@ -15718,7 +15718,7 @@ LABEL_COLUMN = 'fare_amount'
 
 # Set the default values for each CSV column in case there is a missing value
 default_values = [['nokey'], [2.5], [-74.0], [40.0], [-74.0], [40.0], [1], [14], [3], [16], [25], [6], [11], [3.4]]
-    
+
 # Create an input function that stores your data into a dataset
 def read_dataset(filename, mode, batch_size = 512):
     def _input_fn():
@@ -15727,13 +15727,13 @@ def read_dataset(filename, mode, batch_size = 512):
             features = dict(zip(CSV_COLUMNS, columns))
             label = features.pop(LABEL_COLUMN)
             return features, label
-    
+
         # Create list of files that match pattern
         file_list = tf.gfile.Glob(filename)
 
         # Create dataset from file list, and skips the first/header line
         dataset = tf.data.TextLineDataset(file_list).map(decode_csv)
-        
+
         if mode == tf.estimator.ModeKeys.TRAIN:
             num_epochs = None # indefinitely
             dataset = dataset.shuffle(buffer_size = 100 * batch_size)
@@ -15788,26 +15788,26 @@ def add_more_features(feats):
     distance = tf.feature_column.bucketized_column(
         source_column = feats[11],
         boundaries = list(range(1, 32, 2)))
-    
+
     crossed_pickup = tf.feature_column.crossed_column([pickup_longitude, pickup_latitude], 29399)
     """
     This hash_bucket_size chosen because there are 22100 buckets:
     Multiplied by a load factor of 1.33 is 29393 and the next prime number is 29399
     """
     crossed_dropoff =  tf.feature_column.crossed_column([dropoff_longitude, dropoff_latitude], 29399)
-    
+
     crossed_time = tf.feature_column.crossed_column([hour, day_of_week], 223)
-    
+
     crossed_day = tf.feature_column.crossed_column([day_of_month, day_of_week], 293)
-    
+
     crossed_month = tf.feature_column.crossed_column([month, year], 111)
-    
+
     embedding_feats = [crossed_pickup, crossed_dropoff, crossed_time, crossed_day, crossed_month]
     dimensions = [13, 13, 4, 4, 3]
-    
+
     bucketized_feats = [passenger_count, hour, day_of_week, day_of_month, week, month, year,
                         pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude]
-    
+
     deep_columns = bucketized_feats
 
     for feat, dimension in zip(embedding_feats, dimensions):
@@ -15819,7 +15819,7 @@ def add_more_features(feats):
     wide_columns = bucketized_feats + embedding_feats
 
     wide_columns.append(feats[11])
- 
+
     return wide_columns, deep_columns
 
 wide_columns, deep_columns = add_more_features(INPUT_COLUMNS)
@@ -15858,7 +15858,7 @@ def key_model_fn_gen(estimator):
 
 # ## From: https://stackoverflow.com/questions/44381879/training-and-predicting-with-instance-keys
 # """
-                     
+
 # ## Or if not working, try this
 # """
 # def forward_key_to_export(estimator):
@@ -15888,7 +15888,7 @@ def train_and_evaluate(args):
         linear_feature_columns=wide_columns,
         dnn_feature_columns=deep_columns,
         dnn_hidden_units=args['hidden_units'])
-    
+
 #     tf.estimator.DNNRegressor(
 #         model_dir = args['output_dir'],
 #         feature_columns = feature_cols,
@@ -16236,8 +16236,8 @@ or continue streaming the logs with the command
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Copying gs://tnw-nyc-taxi-fare-prediction/taxi-test.csv...
-/ [1/1 files][  1.1 MiB/  1.1 MiB] 100% Done                                    
-Operation completed over 1 objects/1.1 MiB.                                      
+/ [1/1 files][  1.1 MiB/  1.1 MiB] 100% Done
+Operation completed over 1 objects/1.1 MiB.
 </pre>
 </div>
 </div>
@@ -16922,7 +16922,7 @@ Creating version (this might take a few minutes)......
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2> Prediction </h2>
+<h2> Prediction </h2><p>Unfortunately, the modifications I made to the model code to pass the key through the model on to be rejoind with the prediction didn't work, which can be seen in the bash gcloud command below, but as you can see in the following cell, online (real-time) prediction does indeed work when passing in json without a key.</p>
 </div>
 </div>
 </div>
@@ -17112,7 +17112,7 @@ or continue streaming the logs with the command
   </div>
 
 
- 
+
 
 
 
