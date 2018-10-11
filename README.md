@@ -1,4 +1,5 @@
 # Content: Capstone Project
+Udacity - Machine Learning Engineer Nanodegree | Nathaniel Watkins
 ## Project: NYC-Taxi-Fare-Prediction
 Kaggle competition entry and Capstone project for Udacity Machine Learning Engineer Nanodegree
 
