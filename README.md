@@ -1,17 +1,28 @@
-# NYC-Taxi-Fare-Prediction---Capstone-Project
+# Content: Capstone Project
+## Project: NYC-Taxi-Fare-Prediction
 Kaggle competition entry and Capstone project for Udacity Machine Learning Engineer Nanodegree
 
-### Kaggle Competition - New York City Taxi Fare Prediction
-Competition:
-[https://www.kaggle.com/c/new-york-city-taxi-fare-prediction](https://www.kaggle.com/c/new-york-city-taxi-fare-prediction)
-
-### Dataset available for download directly from Kaggle or used within a Kernel on their site
-[https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/data](https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/data)
-Alternatively, you can access the source of this dataset as a public dataset on Google Big Query:
-[https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips](https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips?tab=details)
+### Final Report
+* To see my work and results, open: 
+[Capstone Project Report.pdf](https://github.com/TheNathanielWatkins/NYC-Taxi-Fare-Prediction---Capstone-Project/blob/master/Capstone%20Project%20Report.pdf)
 
 ### Access the capstone project rubric here:
 [https://review.udacity.com/#!/rubrics/108/view](https://review.udacity.com/#!/rubrics/108/view)
+
+-----
+
+### Kaggle Competition - New York City Taxi Fare Prediction
+* Competition:
+  * [https://www.kaggle.com/c/new-york-city-taxi-fare-prediction](https://www.kaggle.com/c/new-york-city-taxi-fare-prediction)
+
+* Results:
+  * Placed within top third on leaderboard with 3.26 RMSE (less than 2 points away from the top score)
+
+### Dataset available for download directly from Kaggle or used within a Kernel on their site
+[https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/data](https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/data)
+
+Alternatively, you can access the source of this dataset as a public dataset on Google Big Query:
+[https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips](https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips?tab=details)
 
 ##
 
