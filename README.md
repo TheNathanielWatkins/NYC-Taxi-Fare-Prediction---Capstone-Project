@@ -7,7 +7,7 @@ Kaggle competition entry and Capstone project for Udacity Machine Learning Engin
 [Capstone Project Report.pdf](https://github.com/TheNathanielWatkins/NYC-Taxi-Fare-Prediction---Capstone-Project/blob/master/Capstone%20Project%20Report.pdf)
 
 ### Capstone Project Rubric
-[https://review.udacity.com/#!/rubrics/108/view](https://review.udacity.com/#!/rubrics/108/view)
+* [https://review.udacity.com/#!/rubrics/108/view](https://review.udacity.com/#!/rubrics/108/view)
 
 -----
 
