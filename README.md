@@ -25,12 +25,15 @@ Kaggle competition entry and Capstone project for Udacity Machine Learning Engin
 Alternatively, you can access the source of this dataset as a public dataset on Google Big Query:
 [https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips](https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips?tab=details)
 
-##
 
-The data files are not included here on GitHub due to size limitations, but they can be downloaded from Kaggle then transformed using my "Data Exploration and File Prep.ipnyb" notebook.
+## Key Files
 
-All the bash commands to create, train, deploy and predict with the model are bundled up in "Train, Deploy, Predict with MLengine.ipynb", including the code needed to create baseline predictions.
+* The data files are not included here on GitHub due to size limitations, but they can be downloaded from Kaggle then transformed using my "[Data Exploration and File Prep.ipnyb](https://github.com/TheNathanielWatkins/NYC-Taxi-Fare-Prediction---Capstone-Project/blob/master/Train%2C%20Deploy%2C%20Predict%20with%20MLengine.ipynb)" notebook.
 
-Performance of this model is judged by RMSE scores returned by making a submission to the Kaggle competition.
+* All the bash commands to create, train, deploy and predict with the model are bundled up in "[Train, Deploy, Predict with MLengine.ipynb](https://github.com/TheNathanielWatkins/NYC-Taxi-Fare-Prediction---Capstone-Project/blob/master/Train%2C%20Deploy%2C%20Predict%20with%20MLengine.ipynb)", including the code needed to create baseline predictions.
+
+* Another important file is contained in the taxifare/v2-trainer folder: "[model.py](https://github.com/TheNathanielWatkins/NYC-Taxi-Fare-Prediction---Capstone-Project/blob/master/taxifare/v2-trainer/model.py)" which contains all the code for creating and training the TensorFlow model including the feature columns.
+
+-----
 
 Many thanks to [Google](https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/courses/machine_learning/deepdive/03_tensorflow) and [Albert Van Breemen](https://www.kaggle.com/breemen/nyc-taxi-fare-data-exploration) for the code they've made freely available, which I've used as a starting point for this project and the competition.
