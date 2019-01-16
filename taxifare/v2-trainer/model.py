@@ -14,7 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """
-Thanks to Google for providing training materials and coursework on TensorFlow, GCP and ML Engine. I used the code that they provided here as a starting point and structure for my project:
+Thanks to Google for providing training materials and coursework on TensorFlow, GCP and ML Engine.
+I used the code that they provided here as a starting point and structure for my project:
 https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/courses/machine_learning/deepdive/03_tensorflow
 """
 
@@ -30,8 +31,8 @@ import numpy as np
 tf.logging.set_verbosity(tf.logging.INFO)
 
 ## List the CSV columns
-CSV_COLUMNS = ['key', 'fare_amount', 'pickup_longitude', 'pickup_latitude', 'dropoff_longitude', 'dropoff_latitude', 'passenger_count',
-               'hour', 'day_of_week', 'day_of_month', 'week', 'month', 'year', 'distance_km']
+CSV_COLUMNS = ['key', 'fare_amount', 'pickup_longitude', 'pickup_latitude', 'dropoff_longitude', 'dropoff_latitude',
+               'passenger_count', 'hour', 'day_of_week', 'day_of_month', 'week', 'month', 'year', 'distance_km']
 
 ## Choose which column is your label
 LABEL_COLUMN = 'fare_amount'
